@@ -35,7 +35,7 @@ app.get('/calculate-tax', (req, res) => {
 app.get('/estimate-delivery', (req, res) => {
   const distance = parseFloat(req.query.distance);
   res.send(
-    req.query.shippingMethod.toLowerCase() === 'tandard'
+    req.query.shippingMethod.toLowerCase() === 'standard'
       ? (distance / 50).toString()
       : req.query.shippingMethod.toLowerCase() === 'express'
         ? (distance / 100).toString()
